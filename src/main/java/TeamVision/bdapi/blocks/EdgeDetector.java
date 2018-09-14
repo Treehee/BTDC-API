@@ -1,9 +1,4 @@
-package com.enwash.deco.blocks;
-
-import com.enwash.deco.Main;
-import com.enwash.deco.init.ModBlocks;
-import com.enwash.deco.init.ModItems;
-import com.enwash.deco.util.IHasModel;
+package TeamVision.bdapi.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -27,23 +22,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class CoffeeTable extends BlockBase
+public class CoffeeTable extends Block implements IHasModel
 {
     public static final PropertyBool BACK = PropertyBool.create("back");
     public static final PropertyBool FORWARD = PropertyBool.create("forward");
     public static final PropertyBool LEFT = PropertyBool.create("left");
     public static final PropertyBool RIGHT = PropertyBool.create("right");
-
-  
-    public static final AxisAlignedBB COFFEE_TABLE_AABB = new AxisAlignedBB(0, 0, 0, 1D, .75D, 1D);
     public CoffeeTable(String name, Material material, SoundType sound)
     {
-        super(name, material);
-        setHarvestLevel("axe", 0);
-        setHardness(1.0F);
-        setSoundType(sound);
-        setDefaultState(this.blockState.getBaseState().withProperty(BACK, false).withProperty(FORWARD, false).withProperty(LEFT, false).withProperty(RIGHT, false));
-        setCreativeTab(Main.furniture);        
+        super(material);
+        setDefaultState(this.blockState.getBaseState().withProperty(BACK, false).withProperty(FORWARD, false).withProperty(LEFT, false).withProperty(RIGHT, false));    
     }
 
     @Override
@@ -67,11 +55,6 @@ public class CoffeeTable extends BlockBase
     public boolean isFullCube(IBlockState state)
     {
         return false;
-    }
-
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-    	return COFFEE_TABLE_AABB;
     }
     
     @Override
