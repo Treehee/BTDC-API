@@ -1,0 +1,16 @@
+[
+{
+  "modid": "btdcapi",
+  "name": "BTDC API",
+  "description": "A Minecraft mod filled with default classes, useful for making furniture and other decorative elements.",
+  "version": "0.1",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Merlijn (DutchM/merren2306)", "enwash"],
+  "credits": "Merlijn & enwash",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
